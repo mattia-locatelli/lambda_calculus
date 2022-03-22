@@ -9,6 +9,7 @@ Scritto nella sintassi di Backus-Naur:
   <espressione>::= <nome>|<funzione>|<applicazione>
   
 Una funzione è un'astrazione di una λ-espressione con nome:
-  <funzione>::= λ<nome><espressione>
+  <funzione>::= λ<nome>.<espressione>
+in questo caso nome rappresenta la variabile bound (l'equivalente di un parametro in una funzione c#)
   
 
