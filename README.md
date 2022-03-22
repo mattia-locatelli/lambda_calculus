@@ -32,4 +32,6 @@ dove:
   
 L'**espressionedifunzione** contiene la funzione che verrà specializzata con il valore di **espressionediargomento**
 
-Un'applicazione di funzione si chiama anche bound pair (funzione,valore) e si dice che si applica l'**espressionedifunzione** all'**espressionediargomento**
+Un'applicazione di funzione si chiama anche **bound pair** e si dice che si applica l'**espressionedifunzione** all'**espressionediargomento**
+
+
