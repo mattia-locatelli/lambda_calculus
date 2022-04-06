@@ -34,4 +34,11 @@ L'**espressionedifunzione** contiene la funzione che verrà specializzata con il
 
 Un'applicazione di funzione si chiama anche **bound pair** e si dice che si applica l'**espressionedifunzione** all'**espressionediargomento**
 
+Per valutare si possono seguire due diversi ordini di valutazione:
+  - ordine applicativo: si valutano le espressioni a partire da quella più annidata
+  - ordine normale: si valutano le espressioni a partire da quella più a sinistra
+
+(vedi https://courses.cs.washington.edu/courses/cse505/99au/functional/applicative-normal.pdf)
+
+
 
