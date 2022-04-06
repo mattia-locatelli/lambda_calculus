@@ -41,4 +41,26 @@ Per valutare si possono seguire due diversi ordini di valutazione:
 (vedi https://courses.cs.washington.edu/courses/cse505/99au/functional/applicative-normal.pdf)
 
 
+## funzione identity
 
+è una funzione che si limita a restituire il parametro usato.
+
+λx.x
+
+proviamo a passare come parametro alle funzione identity la funzione identity stessa
+
+(λx.x λx.x) => λx.x
+
+## funzione self-application
+
+è una funzione che applica il suo argomento al suo argomento.
+
+λs.(s s)
+
+Proviamo ad applicare la funzione identity a self-application:
+
+(λx.x λs.(s s)) => λs.(s s)
+
+Proviamo ora ad applicare la funzione self-application alla funzione identity:
+
+(λs.(s s) λx.x) => (λx.x λx.x) => λx.x
