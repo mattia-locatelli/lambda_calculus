@@ -64,3 +64,11 @@ Proviamo ad applicare la funzione identity a self-application:
 Proviamo ora ad applicare la funzione self-application alla funzione identity:
 
 (λs.(s s) λx.x) => (λx.x λx.x) => λx.x
+
+Proviamo ora ad applicare la funzione self-application a se stessa:
+
+(λs.(s s) λs.(s s)) => (λs.(s s) λs.(s s))
+
+Applicando self-application a se stessa otteniamo nuovamente l'applicazione di self-application a se stessa in un loop infinito. 
+
+Da questo si può capire non tutte le valutazioni di espressioni terminano; inoltre ** non esiste un modo di sapere se la valutazione di un'espressione termini o no **.
