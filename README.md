@@ -72,3 +72,14 @@ Proviamo ora ad applicare la funzione self-application a se stessa:
 Applicando self-application a se stessa otteniamo nuovamente l'applicazione di self-application a se stessa in un loop infinito. 
 
 Da questo si può capire non tutte le valutazioni di espressioni terminano; inoltre **non esiste un modo di sapere se la valutazione di un'espressione termini o no**.
+
+## Funzione application-function
+
+è una funzione che prende come argomento una funzione che è l'applicazione dell'argomento della prima funzione all'argomento della seconda funzione. 
+
+λfunc.λarg.(func arg)
+
+Proviamo ad applicare la funzione identity all' application-function:
+
+(λfunc.λarg.(func arg) λx.x) λs.(s s) => (λarg.(λx.x arg) λs.(s s)) => (λx.x λs.(s s)) => λs.(s s)
+
