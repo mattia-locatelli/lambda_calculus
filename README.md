@@ -51,7 +51,7 @@ proviamo a passare come parametro alle funzione identity la funzione identity st
 
 (λx.x λx.x) => λx.x
 
-## funzione self-application
+## funzione self-apply
 
 è una funzione che applica il suo argomento al suo argomento.
 
@@ -73,7 +73,7 @@ Applicando self-application a se stessa otteniamo nuovamente l'applicazione di s
 
 Da questo si può capire non tutte le valutazioni di espressioni terminano; inoltre **non esiste un modo di sapere se la valutazione di un'espressione termini o no**.
 
-## Funzione application-function
+## Funzione apply
 
 è una funzione che prende come argomento una funzione che è l'applicazione dell'argomento della prima funzione all'argomento della seconda funzione. 
 
@@ -83,3 +83,21 @@ Proviamo ad applicare la funzione identity all' application-function:
 
 (λfunc.λarg.(func arg) λx.x) λs.(s s) => (λarg.(λx.x arg) λs.(s s)) => (λx.x λs.(s s)) => λs.(s s)
 
+## Sintassi aggiuntiva
+
+per comodità definiamo della sintassi aggiuntiva, nel nostro caso si tratta di regole di sostituzione, che non fa parte delle notazioni del lambda calcolo ma ci rende più facile e veloce scrivere espressioni lambda.
+
+Definiamo quindi la notazione:
+
+def \<nomefunzione\> = \<funzione\>
+  
+che ci permette di assegnare un <nomefunzione> a una <funzione> e sostuirla all'interno di una applicazione di funzione:
+  
+(\<nomefunzione\> \<argomento\>) == (\<funzione\> \<argomento\>)
+
+La sostituzione di di una variabile bound nel corpo di una funzione si chiama **β-riduzione**:
+
+(\<funzione\> \<argomento\>) => \<espressione\>
+
+  
+ 
