@@ -98,6 +98,8 @@ che ci permette di assegnare un <nomefunzione> a una <funzione> e sostuirla all'
 La sostituzione di di una variabile bound nel corpo di una funzione si chiama **β-riduzione**:
 
 (\<funzione\> \<argomento\>) => \<espressione\>
+  
+
 
   
  
