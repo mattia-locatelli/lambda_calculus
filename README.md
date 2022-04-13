@@ -85,7 +85,7 @@ Proviamo ad applicare la funzione identity all' application-function:
 
 ## Sintassi aggiuntiva
 
-per comodità definiamo della sintassi aggiuntiva, nel nostro caso si tratta di regole di sostituzione, che non fa parte delle notazioni del lambda calcolo ma ci rende più facile e veloce scrivere espressioni lambda.
+per comodità definiamo della sintassi aggiuntiva (nel nostro caso si tratta di regole di sostituzione) che non fa parte delle notazioni del lambda calcolo ma ci rende più facile e veloce scrivere espressioni lambda.
 
 Definiamo quindi la notazione:
 
@@ -95,11 +95,17 @@ che ci permette di assegnare un <nomefunzione> a una <funzione> e sostuirla all'
   
 (\<nomefunzione\> \<argomento\>) == (\<funzione\> \<argomento\>)
 
-La sostituzione di di una variabile bound nel corpo di una funzione si chiama **β-riduzione**:
+La sostituzione di una variabile bound nel corpo di una funzione si chiama **β-riduzione**:
 
 (\<funzione\> \<argomento\>) => \<espressione\>
   
-
-
+ad esempio:
   
+def identity = λx.x
+
+(identity u) => (λx.x u) => u
+  
+## Funzioni da funzioni
+  
+
  
