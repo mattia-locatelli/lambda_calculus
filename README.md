@@ -91,7 +91,7 @@ Definiamo quindi la notazione:
 
 def \<nomefunzione\> = \<funzione\>
   
-che ci permette di assegnare un <nomefunzione> a una <funzione> e sostuirla all'interno di una applicazione di funzione:
+che ci permette di assegnare un \<nomefunzione\> a una \<funzione\> e sostuirla all'interno di una applicazione di funzione:
   
 (\<nomefunzione\> \<argomento\>) == (\<funzione\> \<argomento\>)
 
@@ -106,6 +106,26 @@ def identity = λx.x
 (identity u) => (λx.x u) => u
   
 ## Funzioni da funzioni
-  
+
+Possiamo usare la funzione apply per creare nuoveversioni di una funzione. Per esempio possiamo definire una funzione identity2 come:
+
+def identity2 = λ.x((apply identity) x)
+
+Applichiamo ora identity2 a identity:
+
+(identity2 identity) =>
+
+(λ.x((apply identity) x) identity) =>
+
+((apply identity) identity) =>
+
+((λfunc.λarg(func arg) identity) identity) =>
+
+λarg((identity arg) identity => 
+
+(identity identity) =>
+
+identity
+
 
  
