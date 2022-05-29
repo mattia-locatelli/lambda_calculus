@@ -131,41 +131,41 @@ Dimostriamo ora che identity e identity2 sono equivalenti. Applichiamo identity2
   
 (identity2 argument) =>
   
-((λ.x(apply identity)x) <argument>) =>
+((λ.x(apply identity)x) \<argument\>) =>
 
-((apply identity) <argument>) =>
+((apply identity) \<argument\>) =>
 
-(((λ.funcλ.arg(func arg)) identity) <argument> =>
+(((λ.funcλ.arg(func arg)) identity) \<argument\> =>
 
-(identity <argument>) =>
+(identity \<argument\>) =>
 
-λx.x(<argument>) =>
+λx.x(\<argument\>) =>
 
-<argument>
+\<argument\>
 
 Da ciò possiamo ricavare che:
   
-(apply <function>) =>
+(apply \<function\>) =>
 
-(λ.funcλ.arg(func arg) <function>)
+(λ.funcλ.arg(func arg) \<function\>)
 
 λ.arg(<function> arg)
   
-sostiuiamo ora una argomento generico <argument> alla funzioneche abbiamo definito:
+sostiuiamo ora una argomento generico \<argument\> alla funzioneche abbiamo definito:
   
-(λ.arg(<function> arg) <argument>) =>
+(λ.arg(<function> arg) \<argument\>) =>
 
-(<function> <argument>)
+(\<function\> \<argument\>)
   
-otteniamo <function> <argument> che è l'applicazione di <function> ad <argument> ed equivale ad utilizzare la funzione apply.  
+otteniamo \<function\> \<argument\> che è l'applicazione di \<function\> ad \<argument\> ed equivale ad utilizzare la funzione apply.  
   
-In generale invocare apply su una funzione <function> con argomenti generici <argument> equivale a invocare <function> su  <argument>
+In generale invocare apply su una funzione \<function\> con argomenti generici \<argument\> equivale a invocare \<function\> su  \<argument\>
 
-apply <function> <argument> =>
+apply \<function\> \<argument\> =>
 
-(((λ.funcλ.arg (func arg)) <function>) <argument>) =>
+(((λ.funcλ.arg (func arg)) \<function\>) \<argument\>) =>
 
-(λ.arg(<function> arg) <argument>) =>
+(λ.arg(\<function\> arg) \<argument\>) =>
 
 \<function\> \<argument\>  
  
