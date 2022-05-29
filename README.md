@@ -159,7 +159,15 @@ sostiuiamo ora una argomento generico <argument> alla funzioneche abbiamo defini
   
 otteniamo <function> <argument> che è l'applicazione di <function> ad <argument> ed equivale ad utilizzare la funzione apply.  
   
-  
+In generale invocare apply su una funzione <function> con argomenti generici <argument> equivale a invocare <function> su  <argument>
+
+apply <function> <argument> =>
+
+(((λ.funcλ.arg (func arg)) <function>) <argument>) =>
+
+(λ.arg(<function> arg) <argument>) =>
+
+<function> <argument>  
 
 
  
