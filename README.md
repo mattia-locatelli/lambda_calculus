@@ -41,7 +41,7 @@ Per valutare si possono seguire due diversi ordini di valutazione:
 (vedi https://courses.cs.washington.edu/courses/cse505/99au/functional/applicative-normal.pdf)
 
 
-## funzione identity
+## funzione identity ( Idiot - I )
 
 è una funzione che si limita a restituire il parametro usato.
 
@@ -51,7 +51,7 @@ proviamo a passare come parametro alle funzione identity la funzione identity st
 
 (λx.x λx.x) => λx.x
 
-## funzione self-apply
+## funzione self-apply ( Mockingbird - M )
 
 è una funzione che applica il suo argomento al suo argomento.
 
@@ -171,7 +171,7 @@ apply \<function\> \<argument\> =>
  
 ## Selezione argomenti e funzioni di pairing degli argomenti
 
-### Selezione del primo tra due argomenti
+### Selezione del primo tra due argomenti ( Kestrel - K )
 
 Definiamo la funzione:
   
@@ -187,7 +187,7 @@ select_first \<arg1\> \<arg2\>
 
 \<arg2\>  
   
-### Selezione del secondo tra due argomenti
+### Selezione del secondo tra due argomenti ( Kite - KI )
   
  Definiamo la funzione:
   
@@ -203,3 +203,19 @@ select_first \<arg1\> \<arg2\>
  
  \<arg2\>
    
+## Accoppiare due argomenti
+
+Definiamo la funzione:
+  
+def make_pair = λfirst.λsecond.λsecond((func fisrt) second)
+  
+proviamo ora ad applicare la nuova funzione a due delle funzioni che abbiamo già incontrato (apply e identity):
+
+((make_pair identity) apply) =>
+
+((λfirst.λsecond.λfunc(funct first) second) identity ) apply) =>
+
+((λsecond.λfunc(func idenity) second ) apply) =>
+  
+(λfunc(func identy) apply )
+  
