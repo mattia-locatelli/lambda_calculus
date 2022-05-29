@@ -167,6 +167,6 @@ apply <function> <argument> =>
 
 (λ.arg(<function> arg) <argument>) =>
 
-<function> <argument>  
+\<function\> \<argument\>  
  
     
