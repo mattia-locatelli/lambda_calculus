@@ -203,11 +203,11 @@ select_first \<arg1\> \<arg2\>
  
  \<arg2\>
    
-## Accoppiare due argomenti
+## Accoppiare due argomenti ( Vireo - V )
 
 Definiamo la funzione:
   
-def make_pair = λfirst.λsecond.λsecond((func fisrt) second)
+def make_pair = λfirst.λsecond.func((func fisrt) second)
   
 proviamo ora ad applicare la nuova funzione a due delle funzioni che abbiamo già incontrato (apply e identity):
 
@@ -218,4 +218,42 @@ proviamo ora ad applicare la nuova funzione a due delle funzioni che abbiamo gi�
 ((λsecond.λfunc(func idenity) second ) apply) =>
   
 (λfunc(func identy) apply )
+
+Se applichiamo la funzione appena trovata a select_first otteniamo:
+  
+((λfunc(func identy) apply ) select_first) =>
+
+((select_first identity) apply ) =>
+
+((λa.λb(a) identity ) apply ) =>
+
+(λb(identity) apply) =>
+
+identity  
+
+Se invece la applichiamo a select_second otteniamo:
+  
+((λfunc(func identy) apply ) select_second) =>
+
+((apply identity) select_second ) =>
+
+((λfunc.λarg(func arg)) identity) select_second ) =>
+ 
+((λarg(identity arg)) select_second ) =>
+  
+identity select_second =>
+
+λx.x select_second => 
+ 
+select_second
+  
+In genere se applichiamo make_pair a due argomenti generici <arg1> e <arg2> otteniamo:
+
+make_pair \<arg1\> \<arg2\> =>
+  
+(((λfirst.λsecond.λfunc ((func first) second)) \<arg1\>) \<arg2\>) =>
+  
+(((λsecond.λfunc ((func \<arg1\>) second)) \<arg2\>) =>
+  
+λfunc((func \<arg1\>) \<arg2\>)
   
