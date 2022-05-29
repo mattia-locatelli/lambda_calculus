@@ -187,3 +187,19 @@ select_first \<arg1\> \<arg2\>
 
 \<arg2\>  
   
+## Selezione del secondo tra due argomenti
+  
+ Definiamo la funzione:
+  
+ def select_second = λfirst.λsecond.second
+  
+ questa funzione restituisce sempre il secondo argomento. Vediamo un esempio con due argomenti generici
+ 
+ select_second \<arg1\> \<arg2\> =>
+  
+ (((λfirst.λsecond.second) \<arg1\>) \<arg2\>) =>
+ 
+ (λsecond.second) \<arg2\> =>
+ 
+ \<arg2\>
+   
