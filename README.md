@@ -107,7 +107,7 @@ def identity = λx.x
   
 ## Funzioni da funzioni
 
-Possiamo usare la funzione apply per creare nuoveversioni di una funzione. Per esempio possiamo definire una funzione identity2 come:
+Possiamo usare la funzione apply per creare nuove versioni di una funzione. Per esempio possiamo definire una funzione identity2 come:
 
 def identity2 = λ.x((apply identity) x)
 
@@ -126,6 +126,40 @@ Applichiamo ora identity2 a identity:
 (identity identity) =>
 
 identity
+
+Dimostriamo ora che identity e identity2 sono equivalenti. Applichiamo identity2 ad un argomento generico <argument>
+  
+(identity2 argument) =>
+  
+((λ.x(apply identity)x) <argument>) =>
+
+((apply identity) <argument>) =>
+
+(((λ.funcλ.arg(func arg)) identity) <argument> =>
+
+(identity <argument>) =>
+
+λx.x(<argument>) =>
+
+<argument>
+
+Da ciò possiamo ricavare che:
+  
+(apply <function>) =>
+
+(λ.funcλ.arg(func arg) <function>)
+
+λ.arg(<function> arg)
+  
+sostiuiamo ora una argomento generico <argument> alla funzioneche abbiamo definito:
+  
+(λ.arg(<function> arg) <argument>) =>
+
+(<function> <argument>)
+  
+otteniamo <function> <argument> che è l'applicazione di <function> ad <argument> ed equivale ad utilizzare la funzione apply.  
+  
+  
 
 
  
