@@ -257,3 +257,17 @@ make_pair \<arg1\> \<arg2\> =>
   
 λfunc((func \<arg1\>) \<arg2\>)
   
+## Variabili libere e legate
+
+è possibile avere lo stesso nome di variabile nella definizione di una funzione. Ad esempio:
+  
+(λf.(f λf.f) λs.(s s)) =>
+  
+((λs.(s s) λf.f)) =>
+  
+(λf.f λf.f) =>
+  
+λf.f
+  
+Nell'esempio precedente abbiamo sostituito λs.(s s) solo nella prima occorrenza di f nella funzione ( si dice che è in scope ). Solo questa infatti è la variabile bound nell'espressione precedente. Le occorrenze di f in λf.f sono un'altra variabile distinta dalla prima occorenza di f ( si dice che sono fuori scope ).
+  
