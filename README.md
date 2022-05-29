@@ -169,4 +169,21 @@ apply \<function\> \<argument\> =>
 
 \<function\> \<argument\>  
  
-    
+## Selezione argomenti e funzioni di pairing degli argomenti
+
+### Selezione del primo tra due argomenti
+
+Definiamo la funzione:
+  
+def select_fisrt = λfirst.λsecond.first  
+
+questa funzione restituisce sempre il primo dei due argomenti. Vediamo un esempio cond due argomenti generici:
+
+select_first \<arg1\> \<arg2\>
+
+(((λfirst.λsecond.first) \<arg1\>) \<arg2\>) =>
+
+((λsecond.\<arg1\>) \<arg2\>) =>
+
+\<arg2\>  
+  
